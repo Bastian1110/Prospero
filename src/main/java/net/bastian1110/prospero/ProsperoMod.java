@@ -2,8 +2,12 @@ package net.bastian1110.prospero;
 
 import com.mojang.logging.LogUtils;
 import net.bastian1110.prospero.block.ModBlocks;
+import net.bastian1110.prospero.entity.ModEntities;
+import net.bastian1110.prospero.entity.client.RhinoRenderer;
 import net.bastian1110.prospero.item.ModCreativeModTabs;
 import net.bastian1110.prospero.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,6 +34,7 @@ public class ProsperoMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -59,7 +64,7 @@ public class ProsperoMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
         }
     }
 }
