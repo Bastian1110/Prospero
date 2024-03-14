@@ -1,6 +1,5 @@
 package net.bastian1110.prospero.entity.client;
 
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.bastian1110.prospero.entity.animations.ModAnimationDefinitions;

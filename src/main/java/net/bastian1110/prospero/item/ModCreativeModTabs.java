@@ -30,6 +30,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());
 
                         pOutput.accept(ModItems.RHINO_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.FIONO_SPAWN_EGG.get());
                     })
                     .build());
 

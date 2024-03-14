@@ -3,6 +3,7 @@ package net.bastian1110.prospero;
 import com.mojang.logging.LogUtils;
 import net.bastian1110.prospero.block.ModBlocks;
 import net.bastian1110.prospero.entity.ModEntities;
+import net.bastian1110.prospero.entity.client.FionoRenderer;
 import net.bastian1110.prospero.entity.client.RhinoRenderer;
 import net.bastian1110.prospero.item.ModCreativeModTabs;
 import net.bastian1110.prospero.item.ModItems;
@@ -65,6 +66,7 @@ public class ProsperoMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
+            EntityRenderers.register(ModEntities.FIONO.get(), FionoRenderer::new);
         }
     }
 }

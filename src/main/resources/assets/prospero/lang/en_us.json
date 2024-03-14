@@ -18,6 +18,8 @@
 
   "tooltip.prospero.metal_detector.tooltip": "Finds valuables underground!",
 
+  "item.prospero.fiono_spawn_egg" : "Fiono Spawn Egg",
+
 
   "creativetab.tutorial_tab": "Prospero"
 }
