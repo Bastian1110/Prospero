@@ -1,4 +1,8 @@
 # Prospero 🪄
+
+![fiono](./images/Fiono.png "Fiono Dog!")
+
+## Overview
 This is [Prospero](https://en.wikipedia.org/wiki/Prospero), a project focused in implementing really "intelligent" 🧠
 mobs in Minecraft, using Reinforcement Learning (RL).
 
