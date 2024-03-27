@@ -3,6 +3,7 @@ package net.bastian1110.prospero.event;
 import net.bastian1110.prospero.ProsperoMod;
 import net.bastian1110.prospero.entity.client.FionoModel;
 import net.bastian1110.prospero.entity.client.ModModelLayers;
+import net.bastian1110.prospero.entity.client.QuartzGolemModel;
 import net.bastian1110.prospero.entity.client.RhinoModel;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -15,5 +16,6 @@ public class ModEventBusClientEvents {
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event){
         event.registerLayerDefinition(ModModelLayers.RHINO_LAYER, RhinoModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.FIONO_LAYER, FionoModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.QUARTZ_GOLEM_LAYER, QuartzGolemModel::createBodyLayer);
     }
 }

@@ -30,6 +30,10 @@ public class ModItems {
             ()-> new ForgeSpawnEggItem(ModEntities.FIONO, 0x37373a, 0x8dace2,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> QUARTZ_GOLEM_EGG = ITEMS.register("quartz_golem_spawn_egg",
+            ()-> new ForgeSpawnEggItem(ModEntities.QUARTZ_GOLEM,0xe6e1de, 0x6e6a72,
+                    new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

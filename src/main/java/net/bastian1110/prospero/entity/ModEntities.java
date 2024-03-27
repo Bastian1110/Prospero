@@ -2,6 +2,7 @@ package net.bastian1110.prospero.entity;
 
 import net.bastian1110.prospero.ProsperoMod;
 import net.bastian1110.prospero.entity.custom.FionoEntity;
+import net.bastian1110.prospero.entity.custom.QuartzGolemEntity;
 import net.bastian1110.prospero.entity.custom.RhinoEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -22,6 +23,10 @@ public class ModEntities {
     public static  final RegistryObject<EntityType<FionoEntity>> FIONO =
             ENTITY_TYPES.register("fiono", () -> EntityType.Builder.of(FionoEntity::new, MobCategory.CREATURE)
                     .sized(1f, 1f).build("fiono"));
+
+    public static final RegistryObject<EntityType<QuartzGolemEntity>> QUARTZ_GOLEM =
+            ENTITY_TYPES.register("quartz_golem", ()-> EntityType.Builder.of(QuartzGolemEntity::new, MobCategory.CREATURE)
+                    .sized(1f, 1f).build("quartz_golem"));
 
 
 

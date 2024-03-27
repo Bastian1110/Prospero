@@ -24,6 +24,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.FIONO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.QUARTZ_GOLEM_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
     }
 

@@ -6,6 +6,78 @@ import net.minecraft.client.animation.Keyframe;
 import net.minecraft.client.animation.KeyframeAnimations;
 
 public class ModAnimationDefinitions {
+
+    public static final AnimationDefinition QUARTZ_GOLEM_WALK = AnimationDefinition.Builder.withLength(0.75f).looping()
+            .addAnimation("quartz_golem",
+                    new AnimationChannel(AnimationChannel.Targets.ROTATION,
+                            new Keyframe(0f, KeyframeAnimations.degreeVec(-2.5f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.375f, KeyframeAnimations.degreeVec(2.5f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.75f, KeyframeAnimations.degreeVec(-2.5f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR)))
+            .addAnimation("right_leg",
+                    new AnimationChannel(AnimationChannel.Targets.ROTATION,
+                            new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 10f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.375f, KeyframeAnimations.degreeVec(0f, 0f, -8f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.75f, KeyframeAnimations.degreeVec(0f, 0f, 10f),
+                                    AnimationChannel.Interpolations.LINEAR)))
+            .addAnimation("left_leg",
+                    new AnimationChannel(AnimationChannel.Targets.ROTATION,
+                            new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, -8f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.375f, KeyframeAnimations.degreeVec(0f, 0f, 9.62f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.75f, KeyframeAnimations.degreeVec(0f, 0f, -8f),
+                                    AnimationChannel.Interpolations.LINEAR)))
+            .addAnimation("left_arm",
+                    new AnimationChannel(AnimationChannel.Targets.ROTATION,
+                            new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 64f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.375f, KeyframeAnimations.degreeVec(0f, 0f, -32f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.75f, KeyframeAnimations.degreeVec(0f, 0f, 64f),
+                                    AnimationChannel.Interpolations.LINEAR)))
+            .addAnimation("right_arm",
+                    new AnimationChannel(AnimationChannel.Targets.ROTATION,
+                            new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, -32f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.375f, KeyframeAnimations.degreeVec(0f, 0f, 64f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.75f, KeyframeAnimations.degreeVec(0f, 0f, -32f),
+                                    AnimationChannel.Interpolations.LINEAR))).build();
+    public static final AnimationDefinition QUARTZ_GOLEM_IDLE = AnimationDefinition.Builder.withLength(1.5f).looping()
+            .addAnimation("quartz_golem",
+                    new AnimationChannel(AnimationChannel.Targets.POSITION,
+                            new Keyframe(0f, KeyframeAnimations.posVec(0f, 0f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR)))
+            .addAnimation("head",
+                    new AnimationChannel(AnimationChannel.Targets.POSITION,
+                            new Keyframe(0f, KeyframeAnimations.posVec(0f, -0.1f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.75f, KeyframeAnimations.posVec(0f, 0.1f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(1.5f, KeyframeAnimations.posVec(0f, -0.1f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR)))
+            .addAnimation("left_arm",
+                    new AnimationChannel(AnimationChannel.Targets.POSITION,
+                            new Keyframe(0f, KeyframeAnimations.posVec(0f, -0.1f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.75f, KeyframeAnimations.posVec(0f, 0.1f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(1.5f, KeyframeAnimations.posVec(0f, -0.1f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR)))
+            .addAnimation("right_arm",
+                    new AnimationChannel(AnimationChannel.Targets.POSITION,
+                            new Keyframe(0f, KeyframeAnimations.posVec(0f, -0.1f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(0.75f, KeyframeAnimations.posVec(0f, 0.1f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR),
+                            new Keyframe(1.5f, KeyframeAnimations.posVec(0f, -0.1f, 0f),
+                                    AnimationChannel.Interpolations.LINEAR))).build();
+
     public static final AnimationDefinition FIONO_IDLE = AnimationDefinition.Builder.withLength(0.75f).looping()
             .addAnimation("tail",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,

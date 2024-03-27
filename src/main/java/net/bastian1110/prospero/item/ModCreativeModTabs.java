@@ -31,6 +31,7 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(ModItems.RHINO_SPAWN_EGG.get());
                         pOutput.accept(ModItems.FIONO_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.QUARTZ_GOLEM_EGG.get());
                     })
                     .build());
 
