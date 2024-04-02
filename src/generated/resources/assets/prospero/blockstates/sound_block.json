@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "prospero:block/sound_block"
+    }
+  }
+}

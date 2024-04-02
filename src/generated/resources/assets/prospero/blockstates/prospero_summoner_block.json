@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "prospero:block/prospero_summoner_block"
+    }
+  }
+}

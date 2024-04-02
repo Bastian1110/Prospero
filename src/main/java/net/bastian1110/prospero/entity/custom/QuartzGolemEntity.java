@@ -12,6 +12,8 @@ import net.minecraft.world.entity.animal.AbstractGolem;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
@@ -20,7 +22,6 @@ import java.util.UUID;
 public class QuartzGolemEntity extends AbstractGolem implements NeutralMob {
     public QuartzGolemEntity(EntityType<? extends AbstractGolem> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
-        this.setMaxUpStep(1.0F);
     }
 
     public final AnimationState idleAnimationState = new AnimationState();
@@ -57,16 +58,18 @@ public class QuartzGolemEntity extends AbstractGolem implements NeutralMob {
 
     @Override
     protected void registerGoals() {
-        this.goalSelector.addGoal(1, new MoveTowardsTargetGoal(this, 0.9, 32.0F));
-        this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 6.0F));
-        this.targetSelector.addGoal(4, new HurtByTargetGoal(this, new Class[0]));
+        this.goalSelector.addGoal(0, new FloatGoal(this));
+        this.goalSelector.addGoal(1, new TemptGoal(this, 1.1D, Ingredient.of(Items.COOKED_CHICKEN), false));
+        this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.1D));
+        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 5f));
+        this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
     }
 
     public static AttributeSupplier.Builder createAttributes(){
         return Mob.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 50)
-                .add(Attributes.MOVEMENT_SPEED, 0.30);
+                .add(Attributes.MAX_HEALTH, 10D)
+                .add(Attributes.MOVEMENT_SPEED, 0.1D)
+                .add(Attributes.FOLLOW_RANGE, 2F);
     }
 
     @Override

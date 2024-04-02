@@ -1,6 +1,8 @@
 {
   "values": [
     "prospero:sapphire_block",
-    "prospero:sapphire_ore"
+    "prospero:sapphire_ore",
+    "prospero:sound_block",
+    "prospero:prospero_summoner_block"
   ]
 }

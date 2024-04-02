@@ -5,6 +5,7 @@ import net.bastian1110.prospero.entity.ModEntities;
 import net.bastian1110.prospero.entity.custom.FionoEntity;
 import net.bastian1110.prospero.entity.custom.QuartzGolemEntity;
 import net.bastian1110.prospero.entity.custom.RhinoEntity;
+import net.bastian1110.prospero.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

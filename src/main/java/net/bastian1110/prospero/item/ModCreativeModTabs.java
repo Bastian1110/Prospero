@@ -29,6 +29,10 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());
 
+                        pOutput.accept(ModBlocks.SOUND_BLOCK.get());
+
+                        pOutput.accept(ModBlocks.PROSPERO_SUMMONER_BLOCK.get());
+
                         pOutput.accept(ModItems.RHINO_SPAWN_EGG.get());
                         pOutput.accept(ModItems.FIONO_SPAWN_EGG.get());
                         pOutput.accept(ModItems.QUARTZ_GOLEM_EGG.get());

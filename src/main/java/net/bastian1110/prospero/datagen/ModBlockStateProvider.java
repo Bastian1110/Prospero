@@ -18,6 +18,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SAPPHIRE_BLOCK);
 
         blockWithItem(ModBlocks.SAPPHIRE_ORE);
+
+        blockWithItem(ModBlocks.SOUND_BLOCK);
+
+        blockWithItem(ModBlocks.PROSPERO_SUMMONER_BLOCK);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

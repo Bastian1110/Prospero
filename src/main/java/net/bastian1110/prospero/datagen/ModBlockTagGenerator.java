@@ -25,7 +25,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.SAPPHIRE_BLOCK.get(),
-                        ModBlocks.SAPPHIRE_ORE.get());
+                        ModBlocks.SAPPHIRE_ORE.get(),
+                        ModBlocks.SOUND_BLOCK.get(),
+                        ModBlocks.PROSPERO_SUMMONER_BLOCK.get());
 
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)

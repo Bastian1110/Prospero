@@ -1,3 +1,9 @@
-// 1.20.1	2024-03-09T23:49:17.699656	Loot Tables
+// 1.20.1	2024-04-01T19:22:33.924061	Loot Tables
+c4bfe2788ae0c832cc70194b2e6f942f69768796 data/prospero/loot_tables/blocks/deepslate_sapphire_ore.json
+915529751f73e2778c5020863896d33676adc53f data/prospero/loot_tables/blocks/end_stone_sapphire_ore.json
+a03d8761001281e6e34506da90a216f17ec0cea5 data/prospero/loot_tables/blocks/nether_sapphire_ore.json
+701f0f9846b62ac51a2215f7ffbd4ff36d08e2a5 data/prospero/loot_tables/blocks/prospero_summoner_block.json
+ef96254f85de242ff41145d2e5786b6ff102d3f1 data/prospero/loot_tables/blocks/raw_sapphire_block.json
 88fb4f7b030a4ad2a5f1fbeb656b785616625e92 data/prospero/loot_tables/blocks/sapphire_block.json
 cc5411dd83cd0b284b60fafbd2a586393e591d70 data/prospero/loot_tables/blocks/sapphire_ore.json
+53a8bfacbc729fc702c343c2bd9b80c6f2750570 data/prospero/loot_tables/blocks/sound_block.json
