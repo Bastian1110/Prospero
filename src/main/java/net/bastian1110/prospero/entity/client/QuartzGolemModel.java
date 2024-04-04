@@ -2,23 +2,28 @@ package net.bastian1110.prospero.entity.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.math.Axis;
 import net.bastian1110.prospero.entity.animations.ModAnimationDefinitions;
 import net.bastian1110.prospero.entity.custom.FionoEntity;
 import net.bastian1110.prospero.entity.custom.QuartzGolemEntity;
+import net.minecraft.client.model.ArmedModel;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.HumanoidArm;
 
-public class QuartzGolemModel<T extends Entity> extends HierarchicalModel<T> {
+public class QuartzGolemModel<T extends Entity> extends HierarchicalModel<T> implements ArmedModel {
 
     private final ModelPart quartz_golem;
     private final ModelPart head;
+    private final ModelPart right_arm;
     public QuartzGolemModel(ModelPart root){
         this.quartz_golem = root.getChild("quartz_golem");
         this.head = quartz_golem.getChild("head");
+        this.right_arm = quartz_golem.getChild("right_arm");
     }
 
     public static LayerDefinition createBodyLayer() {
@@ -45,7 +50,6 @@ public class QuartzGolemModel<T extends Entity> extends HierarchicalModel<T> {
     public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.root().getAllParts().forEach(ModelPart::resetPose);
         this.applyHeadRotation(netHeadYaw, headPitch, ageInTicks);
-
         this.animateWalk(ModAnimationDefinitions.QUARTZ_GOLEM_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
         this.animate(((QuartzGolemEntity) entity).idleAnimationState, ModAnimationDefinitions.QUARTZ_GOLEM_IDLE, ageInTicks, 1f);
 
@@ -55,6 +59,16 @@ public class QuartzGolemModel<T extends Entity> extends HierarchicalModel<T> {
         pNetHeadYaw = Mth.clamp(pNetHeadYaw, -10.0F, 10.0F);
 
         this.head.yRot = pNetHeadYaw * ((float)Math.PI / 180F);
+    }
+
+    public void translateToHand(HumanoidArm pSide, PoseStack pPoseStack) {
+        float $$2 = 1.0F;
+        float $$3 = 3.0F;
+        this.quartz_golem.translateAndRotate(pPoseStack);
+        pPoseStack.translate(0.0F, 0.0625F, 0.1875F);
+        pPoseStack.mulPose(Axis.XP.rotation(this.right_arm.xRot));
+        pPoseStack.scale(0.7F, 0.7F, 0.7F);
+        pPoseStack.translate(0.0625F, 0.0F, 0.0F);
     }
 
     @Override

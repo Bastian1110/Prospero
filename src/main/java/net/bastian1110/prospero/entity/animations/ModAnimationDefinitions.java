@@ -7,6 +7,7 @@ import net.minecraft.client.animation.KeyframeAnimations;
 
 public class ModAnimationDefinitions {
 
+
     public static final AnimationDefinition QUARTZ_GOLEM_WALK = AnimationDefinition.Builder.withLength(0.75f).looping()
             .addAnimation("quartz_golem",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
