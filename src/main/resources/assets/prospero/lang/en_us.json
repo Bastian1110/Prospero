@@ -18,6 +18,10 @@
 
   "block.prospero.prospero_summoner_block" : "Prospero Summoner",
 
+  "block.prospero.quartz_chest" : "Quartz Chest",
+
+  "container.quartz_chest" : "Quartz Chest",
+
   "tooltip.prospero.metal_detector.tooltip": "Finds valuables underground!",
 
   "item.prospero.fiono_spawn_egg" : "Fiono Spawn Egg",

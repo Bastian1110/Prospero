@@ -2,6 +2,7 @@ package net.bastian1110.prospero.block;
 
 import net.bastian1110.prospero.ProsperoMod;
 import net.bastian1110.prospero.block.custom.ProsperoSummonerBlock;
+import net.bastian1110.prospero.block.custom.QuartzChestBlock;
 import net.bastian1110.prospero.block.custom.SoundBlock;
 import net.bastian1110.prospero.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -46,6 +47,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PROSPERO_SUMMONER_BLOCK = registerBlock("prospero_summoner_block",
             () -> new ProsperoSummonerBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final  RegistryObject<Block> QUARTZ_CHEST = registerBlock("quartz_chest",
+            ()-> new QuartzChestBlock(BlockBehaviour.Properties.copy(Blocks.BARREL).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

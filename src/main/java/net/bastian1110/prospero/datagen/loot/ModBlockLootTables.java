@@ -29,6 +29,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
         this.dropSelf(ModBlocks.SOUND_BLOCK.get());
         this.dropSelf(ModBlocks.PROSPERO_SUMMONER_BLOCK.get());
+        this.dropSelf(ModBlocks.QUARTZ_CHEST.get());
 
         this.add(ModBlocks.SAPPHIRE_ORE.get(),
                 block -> createCopperLikeOreDrops(ModBlocks.SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get()));

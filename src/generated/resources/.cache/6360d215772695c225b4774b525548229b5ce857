@@ -1,5 +1,6 @@
-// 1.20.1	2024-04-01T19:22:33.922896	Block States: prospero
+// 1.20.1	2024-04-04T21:25:05.039641	Block States: prospero
 42cd743cde7fae59ed211dd7bd2b592c6fd6b731 assets/prospero/blockstates/prospero_summoner_block.json
+b6fc3a82b02f944ae0a0e66236e5060245c36b7d assets/prospero/blockstates/quartz_chest.json
 c9bdd78fd363aa854d56f7776cd9bf79d8967390 assets/prospero/blockstates/sapphire_block.json
 88ff35a5c8abc7675cd06efd49b4f4e2b3841d81 assets/prospero/blockstates/sapphire_ore.json
 fd3516d29ae3be07585724013cc1f39eb6b5cf16 assets/prospero/blockstates/sound_block.json
@@ -8,6 +9,7 @@ d94abde3516c8b73375f198c718ab47320e6b1e4 assets/prospero/models/block/prospero_s
 140d384798f7ae03dad1c234df5e0f98233d6d82 assets/prospero/models/block/sapphire_ore.json
 890b7180f77965450db972e787004facb7783d2d assets/prospero/models/block/sound_block.json
 38f4c00e7325da586fb1a11754f0a3b9ed6cf6cc assets/prospero/models/item/prospero_summoner_block.json
+6458954495029a7d2090c0fc83b9029088d6f6f0 assets/prospero/models/item/quartz_chest.json
 31e6787a7e88728f23bc23c6667d630510949627 assets/prospero/models/item/sapphire_block.json
 d9987cf15e3c726c41e03b3e8dc35ef4ee2ee4c6 assets/prospero/models/item/sapphire_ore.json
 a3029d7acdc9b7f84716a9294287716048754700 assets/prospero/models/item/sound_block.json

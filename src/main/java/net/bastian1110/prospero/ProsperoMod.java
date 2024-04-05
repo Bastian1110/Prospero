@@ -2,6 +2,7 @@ package net.bastian1110.prospero;
 
 import com.mojang.logging.LogUtils;
 import net.bastian1110.prospero.block.ModBlocks;
+import net.bastian1110.prospero.block.entity.ModBlockEntities;
 import net.bastian1110.prospero.entity.ModEntities;
 import net.bastian1110.prospero.entity.client.FionoRenderer;
 import net.bastian1110.prospero.entity.client.QuartzGolemRenderer;
@@ -36,6 +37,7 @@ public class ProsperoMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
